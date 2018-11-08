@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Boscorí</title>
+
+    <!-- css CDN's -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://js.arcgis.com/4.9/esri/css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+    <!-- own css -->
+    <link rel="stylesheet" href="css/timeline.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+    <!-- JUMBOTRON -->
+    <div class="jumbotron d-flex flex-column justify-content-center">
+        <img src="img/logo.png" class="w-25 mx-auto d-block logo mt-3" alt="">
+        <div class="text-center">
+            <h1 class="display-2">Boscorí</h1>
+            <p class="text-muted mt-2 big w-75 mx-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sollicitudin porttitor lorem id interdum.</p>
+        </div>
+        <hr class="w-50">
+    </div>
+
+    <!-- OUR WORK -->
+    <div class="section-1">
+        <div class="container py-5">
+            <h1 class="text-center">Nuestro trabajo</h1>
+            <div class="row mt-5 text-center">
+                <div class="col-lg-4 col-md-6 mb-5">
+                    <img src="img/icon-1.png" class="img-fluid w-50 mb-3" alt="">
+                    <h4>Alternativas</h4>
+                    <p class="w-75 mx-auto text-justify align-last">
+                        Boscorí busca generar alternativas económicas que permitan a la comunidad aprovechar los recursos naturales de su entorno de una manera sostenible y que garantice un sustento de vida apropiado.
+                    </p>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-5">
+                    <img src="img/icon-2.png" class="img-fluid w-50 mb-3" alt="">
+                    <h4>Comunidad</h4>
+                    <p class="w-75 mx-auto text-justify align-last">
+                        Trabajamos con las comunidades incentivando una buena relación sociedad-naturaleza y la apropiación del territorio, formando de esta manera sistemas socioecológicos.
+                    </p>
+                </div>
+                <div class="col-lg-4 col-md-6 mx-auto mb-5">
+                    <img src="img/icon-3.png" class="img-fluid w-50 mb-3" alt="">
+                    <h4>Conservación</h4>
+                    <p class="w-75 mx-auto text-justify align-last">
+                        Tenemos una perspectiva sobre la conservación que se centra alrededor de la gente y la naturaleza, haciendo necesaria la interdisciplinariedad y la integración entre ciencias sociales y naturales.
+                    </p>
+                </div>
+            </div>
+            <p class="mt-5 w-100 text-justify mx-auto">
+                Actualmente trabajamos únicamente en el proyecto <em>&ldquo;Magia del batir amazónico: custodia frente a la deforestación&rdquo;</em>, el cual consiste en la implementación de un criadero sostenible de escarabajos y mariposas nativos del bosque húmedo tropical, como una alternativa económica, novedosa y sostenible para las comunidades del municipio de las veredas La Estrella y Ciudad Yarí, ubicadas en el municipio de San Vicente del Caguán, Caquetá. Esta alternativa busca frenar y reducir la tasa de deforestación en esta zona, una de las más afectadas en el país debido a las presionas asociadas a la ganaderia, la agricultura y los cultivos ilícitos. A partir de la implementación de esta y futuras estrategías, esperamos poder incentivar el reemplazo de actividades asociadas a la deforestación, la apropiación del territorio por parte de la comunidad y la conservación del bosque húmedo tropical y las especies asociadas a este.
+            </p>
+        </div>
+    </div>
+
+    <!-- WHERE ARE WE -->
+    <div class="section-2">
+        <div class="container py-5">
+            <h1 class="text-center">Dónde trabajamos</h1>
+
+            <div class="mt-3 h-100 d-flex flex-column justify-content-center">
+                <div class="row">
+                    <div class="col-lg-6 d-flex flex-column justify-content-center mb-3">
+                        <p class="text-justify">
+                            Nuestro proyecto se encuentra en el departamento de Caquetá, ubicado al sur de Colombia, en la región de la Amazonia. El trabajo con las comunidades se está haciendo en las veredas de Ciudad Yarí y La Estrella, ubicadas dentro de San Vicente del Caguán, municipio con una de las mayores tasas de deforestación en el país. Esta es una zona compuesta en su mayoría por el Bosque Húmedo Tropical. Adicionalmente, se encuentra cerca del Parque Natural Nacional Chiribiquete, una de las área protegidas más grandes de Latinoamérica y con menor grado de intervención. Este año, el Ministerio de Ambiente y Desarrollo Sostenible declaró un área alrededor de este parque que conecta con otros dos parques ubicados en el departamento del Meta: el PNN Tinigua y el PNN Serranía de la Macarena. Esta franja se denomina el Cinturón Verde y por razones de conectividad entre estas áreas protegidas estratégicas, hace necesario realizar esfuerzos de conservación en la zona.
+                        </p>
+                    </div>
+                    <div class="col-lg-6">
+                        <div id="map" class="mx-auto"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- TIMELINE -->
+    <div class="section-3">
+        <div class="container py-5">
+            <h1 class="text-center">Nuestra trayectoria</h1>
+            <div class="row example-centered mt-5">
+                <div class="col-12">
+                    <ul class="timeline timeline-centered">
+
+                        <!-- 2015 -->
+                        <li class="timeline-item period beginning">
+                            <div class="timeline-info"></div>
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h2 class="timeline-title">2015</h2>
+                            </div>
+                        </li>
+                        <li class="timeline-item">
+                            <div class="timeline-info">
+                                <span>March 12, 2016</span>
+                            </div>
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h3 class="timeline-title">Event Title</h3>
+                                <p>Nullam vel sem. Nullam vel sem. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Donec vitae sapien ut libero venenatis faucibus. ullam dictum felis
+                                    eu pede mollis pretium. Pellentesque ut neque.</p>
+                            </div>
+                        </li>
+                        <li class="timeline-item">
+                            <div class="timeline-info">
+                                <span>March 23, 2016</span>
+                            </div>
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h3 class="timeline-title">Event Title</h3>
+                                <p>Nullam vel sem. Nullam vel sem. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Donec vitae sapien ut libero venenatis faucibus. ullam dictum felis
+                                    eu pede mollis pretium. Pellentesque ut neque. </p>
+                            </div>
+                        </li>
+
+                        <!-- 2016 -->
+                        <li class="timeline-item period">
+                            <div class="timeline-info"></div>
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h2 class="timeline-title">2016</h2>
+                            </div>
+                        </li>
+                        <li class="timeline-item">
+                            <div class="timeline-info">
+                                <span>April 02, 2016</span>
+                            </div>
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h3 class="timeline-title">Event Title</h3>
+                                <p>Nullam vel sem. Nullam vel sem. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Donec vitae sapien ut libero venenatis faucibus. ullam dictum felis
+                                    eu pede mollis pretium. Pellentesque ut neque. </p>
+                            </div>
+                        </li>
+                        <li class="timeline-item">
+                            <div class="timeline-info">
+                                <span>April 28, 2016</span>
+                            </div>
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h3 class="timeline-title">Event Title</h3>
+                                <p>Nullam vel sem. Nullam vel sem. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Donec vitae sapien ut libero venenatis faucibus. ullam dictum felis
+                                    eu pede mollis pretium. Pellentesque ut neque. </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- OUR TEAM -->
+    <div class="section-4">
+        <div class="container">
+            <h1 class="text-center my-3">Nuestro equipo</h1>
+            <div class="row text-center pt-4">
+                <div class="col-lg-4 col-sm-6 member mb-4">
+                    <a href="" data-toggle="modal" data-target="#modal-JL"><img src="img/JL.jpg" alt=""></a>
+                    <h4 class="mt-3">Juan Sebastián López</h4>
+                    <h5 class="text-muted">Investigador social</h5>
+                </div>
+                <div class="col-lg-4 col-sm-6 member mb-4">
+                    <a href="" data-toggle="modal" data-target="#modal-AM"><img src="img/AM.jpg" alt=""></a>
+                    <h4 class="mt-3">Andrés Márquez</h4>
+                    <h5 class="text-muted">Investigador</h5>
+                </div>
+                <div class="col-lg-4 col-sm-6 member mb-4">
+                    <a href="" data-toggle="modal" data-target="#modal-LM"><img src="img/LP.jpg" alt=""></a>
+                    <h4 class="mt-3">Linamaría Peña</h4>
+                    <h5 class="text-muted">Investigadora</h5>
+                </div>
+                <div class="col-lg-4 col-sm-6 member mb-4">
+                    <a href="" data-toggle="modal" data-target="#modal-MV"><img src="img/MV.png" alt=""></a>
+                    <h4 class="mt-3">Marcelo Villa</h4>
+                    <h5 class="text-muted">Gerente de proyectos</h5>
+                </div>
+                <div class="col-lg-4 col-sm-6 member mb-4">
+                    <a href="" data-toggle="modal" data-target="#modal-AV"><img src="img/AV.jpg" alt=""></a>
+                    <h4 class="mt-3">Ana María Villaneda</h4>
+                    <h5 class="text-muted">Investigadora</h5>
+                </div>
+                <div class="col-lg-4 col-sm-6 member mb-4">
+                    <a href="" data-toggle="modal" data-target="#modal-FV"><img src="img/FV.jpg" alt=""></a>
+                    <h4 class="mt-3">Francisco Villazón</h4>
+                    <h5 class="text-muted">Investigador principal</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODALS -->
+    <div class="modal fade" tabindex="-1" role="dialog" id="modal-JL">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-body p-0">
+                    <div class="row full-member">
+                        <div class="col-lg-5">
+                            <img src="img/JL.jpg" alt="" class="img-fluid">
+                        </div>
+                        <div class="col-lg-7">
+                            <button type="button" class="close ml-auto mr-2 mt-1" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <div class="d-flex flex-column justify-content-center p-5">
+                                <h4>Juan Sebastián López</h4>
+                                <h5 class="text-muted">Investigador social</h5>
+                                <h6 class="text-muted">Ecólogo, Pontificia Univerdad Javeriana</h6>
+                                <hr class="w-50 ml-0">
+                                <p class="text-justify">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sapien risus, pharetra commodo quam vel, vehicula pellentesque massa. Nunc posuere lacinia sapien rhoncus congue. Nunc blandit fringilla risus, sed auctor arcu vulputate ut. Integer dapibus rutrum sem sed tincidunt. Nam ex felis, molestie at augue ut, commodo semper sem. Vestibulum ex odio, molestie at eleifend at, commodo eu metus. Aliquam magna elit, imperdiet ac consequat et, vulputate eget enim.
+                                </p>
+                                <span>
+                                    <i class="far fa-envelope text-muted"></i><a href="mailto:j-lopeza@javeriana.edu.co <j-lopeza@javeriana.edu.co>"> j-lopeza@javeriana.edu.co</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" tabindex="-1" role="dialog" id="modal-AM">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-body p-0">
+                    <div class="row full-member">
+                        <div class="col-lg-5">
+                            <img src="img/AM.jpg" alt="" class="img-fluid">
+                        </div>
+                        <div class="col-lg-7 d-flex flex-column justify-content-center p-5">
+                            <h4>Andrés Márquez</h4>
+                            <h5 class="text-muted">Investigador social</h5>
+                            <h6 class="text-muted">Ecólogo, Pontificia Univerdad Javeriana</h6>
+                            <hr class="w-50 ml-0">
+                            <p class="text-justify">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sapien risus, pharetra commodo quam vel, vehicula pellentesque massa. Nunc posuere lacinia sapien rhoncus congue. Nunc blandit fringilla risus, sed auctor arcu vulputate ut. Integer dapibus rutrum sem sed tincidunt. Nam ex felis, molestie at augue ut, commodo semper sem. Vestibulum ex odio, molestie at eleifend at, commodo eu metus. Aliquam magna elit, imperdiet ac consequat et, vulputate eget enim.
+                            </p>
+                            <span>
+                                <i class="far fa-envelope text-muted"></i><a href="mailto:j-lopeza@javeriana.edu.co <j-lopeza@javeriana.edu.co>"> a-marquez@javeriana.edu.co</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" tabindex="-1" role="dialog" id="modal-LM">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-body p-0">
+                    <div class="row full-member">
+                        <div class="col-lg-5">
+                            <img src="img/LP.jpg" alt="" class="img-fluid">
+                        </div>
+                        <div class="col-lg-7 d-flex flex-column justify-content-center p-5">
+                            <h4>Linamaría Peña</h4>
+                            <h5 class="text-muted">Investigadora</h5>
+                            <h6 class="text-muted">Ecóloga, Pontificia Univerdad Javeriana</h6>
+                            <hr class="w-50 ml-0">
+                            <p class="text-justify">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sapien risus, pharetra commodo quam vel, vehicula pellentesque massa. Nunc posuere lacinia sapien rhoncus congue. Nunc blandit fringilla risus, sed auctor arcu vulputate ut. Integer dapibus rutrum sem sed tincidunt. Nam ex felis, molestie at augue ut, commodo semper sem. Vestibulum ex odio, molestie at eleifend at, commodo eu metus. Aliquam magna elit, imperdiet ac consequat et, vulputate eget enim.
+                            </p>
+                            <span>
+                                <i class="far fa-envelope text-muted"></i><a href="mailto:j-lopeza@javeriana.edu.co <j-lopeza@javeriana.edu.co>"> linamariapena@javeriana.edu.co</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" tabindex="-1" role="dialog" id="modal-MV">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-body p-0">
+                    <div class="row full-member">
+                        <div class="col-lg-5">
+                            <img src="img/MV.png" alt="" class="img-fluid">
+                        </div>
+                        <div class="col-lg-7 d-flex flex-column justify-content-center p-5">
+                            <h4>Marcelo Villa</h4>
+                            <h5 class="text-muted">Gerente de proyectos</h5>
+                            <h6 class="text-muted">Ecólogo, Pontificia Univerdad Javeriana</h6>
+                            <hr class="w-50 ml-0">
+                            <p class="text-justify">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sapien risus, pharetra commodo quam vel, vehicula pellentesque massa. Nunc posuere lacinia sapien rhoncus congue. Nunc blandit fringilla risus, sed auctor arcu vulputate ut. Integer dapibus rutrum sem sed tincidunt. Nam ex felis, molestie at augue ut, commodo semper sem. Vestibulum ex odio, molestie at eleifend at, commodo eu metus. Aliquam magna elit, imperdiet ac consequat et, vulputate eget enim.
+                            </p>
+                            <span>
+                                <i class="far fa-envelope text-muted"></i><a href="mailto:j-lopeza@javeriana.edu.co <j-lopeza@javeriana.edu.co>"> marcelo.villa@javeriana.edu.co</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" tabindex="-1" role="dialog" id="modal-AV">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-body p-0">
+                    <div class="row full-member">
+                        <div class="col-lg-5">
+                            <img src="img/AV.jpg" alt="" class="img-fluid">
+                        </div>
+                        <div class="col-lg-7 d-flex flex-column justify-content-center p-5">
+                            <h4>Ana María Villaneda</h4>
+                            <h5 class="text-muted">Investigadora</h5>
+                            <h6 class="text-muted">Ecóloga, Pontificia Univerdad Javeriana</h6>
+                            <hr class="w-50 ml-0">
+                            <p class="text-justify">
+                                Apasionada por el trabajo junto a comunidades vulnerables, principamente ubicadas en ecosistemas de alta montaña, en la resolución de conflictos socioambientales que involucren fauna silvestre. Asimismo, me interesa el trabajo en los ecosistemas de media y baja montaña ya sea enfocados en sus comunidades de flora y fauna como humanas, que buscan su conservación. Mi línea de investigación busca fomentar, por medio de la educación ambiental, un mejor uso de los recursos naturales y una conciencia cívica en la sociedad colombiana.
+                            </p>
+                            <span>
+                                <i class="far fa-envelope text-muted"></i><a href="mailto:j-lopeza@javeriana.edu.co <j-lopeza@javeriana.edu.co>"> avillaneda@javeriana.edu.co</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" tabindex="-1" role="dialog" id="modal-FV">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-body p-0">
+                    <div class="row full-member">
+                        <div class="col-lg-5">
+                            <img src="img/FV.jpg" alt="" class="img-fluid">
+                        </div>
+                        <div class="col-lg-7 d-flex flex-column justify-content-center p-5">
+                            <h4>Francisco Villazón</h4>
+                            <h5 class="text-muted">Investigador</h5>
+                            <h6 class="text-muted">Ecólogo, Pontificia Univerdad Javeriana</h6>
+                            <hr class="w-50 ml-0">
+                            <p class="text-justify">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sapien risus, pharetra commodo quam vel, vehicula pellentesque massa. Nunc posuere lacinia sapien rhoncus congue. Nunc blandit fringilla risus, sed auctor arcu vulputate ut. Integer dapibus rutrum sem sed tincidunt. Nam ex felis, molestie at augue ut, commodo semper sem. Vestibulum ex odio, molestie at eleifend at, commodo eu metus. Aliquam magna elit, imperdiet ac consequat et, vulputate eget enim.
+                            </p>
+                            <span>
+                                <i class="far fa-envelope text-muted"></i><a href="mailto:j-lopeza@javeriana.edu.co <j-lopeza@javeriana.edu.co>"> francisco-villazon@javeriana.edu.co</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- js CDN's -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://js.arcgis.com/4.9/"></script>
+
+    <!-- own js file -->
+    <script src="js/main.js"></script>
+</body>
+</html>
